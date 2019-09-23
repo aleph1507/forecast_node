@@ -22,8 +22,8 @@ weatherForm.addEventListener('submit', (e) => {
             }
 
             messageOne.textContent = `forecast for ${data.address}
-                as in ${data.location} at longitude: ${data.longitude}
-                and latitude: ${data.latitude}`;
+                as in ${data.location} at longitude(istocno ili zapadno od grinic vesna): ${data.longitude}
+                and latitude(severno ili juzno od ekvator, vesna): ${data.latitude}`;
 
             return messageTwo.textContent = `\n${data.forecast}`
 
