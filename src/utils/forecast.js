@@ -23,7 +23,6 @@ const forecast = (lng, lat, callback) => {
             } else if(body.error) {
                 callback(body.error);
             } else {
-                console.log(body.daily.data[0]);
                 callback(
                     undefined,
                     body.daily.data[0].summary +
