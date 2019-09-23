@@ -21,9 +21,9 @@ weatherForm.addEventListener('submit', (e) => {
                 return messageOne.textContent = 'There has been an error.\n' + data.error;
             }
 
-            messageOne.textContent = `forecast for ${data.address}
-                as in ${data.location} at longitude(istocno ili zapadno od grinic vesna): ${data.longitude}
-                and latitude(severno ili juzno od ekvator, vesna): ${data.latitude}`;
+            messageOne.textContent = `forecast for ${data.address}\r\n
+                as in ${data.location} at longitude(istocno ili zapadno od grinic vesna): ${data.longitude}\r\n
+                and latitude(severno ili juzno od ekvator, vesna): ${data.latitude}\r\n`;
 
             return messageTwo.textContent = `\n${data.forecast}`
 

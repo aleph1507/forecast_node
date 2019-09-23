@@ -23,11 +23,15 @@ const forecast = (lng, lat, callback) => {
             } else if(body.error) {
                 callback(body.error);
             } else {
+                console.log(body.daily.data[0]);
                 callback(
                     undefined,
                     body.daily.data[0].summary +
-                    " it is currently " + body.currently.temperature + " degrees out. There is " +
-                    body.currently.precipProbability + " chance of rain."
+                    "\r\nit is currently " + body.currently.temperature + " degrees out.\r\nThere is " +
+                    body.currently.precipProbability + " chance of rain.\r\n" +
+                    "\r\nToday: " + body.daily.data[0].summary +
+                    "\r\nTemperature High: " + body.daily.data[0].temperatureHigh  +
+                    "\r\nTemperature Low: " + body.daily.data[0].temperatureLow
                 );
             }
         });
